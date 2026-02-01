@@ -14,12 +14,3 @@ CREATE TABLE tb_transaksi (
     total INT NOT NULL
 );
 
-CREATE TABLE tb_detail_transaksi (
-    id_detail INT AUTO_INCREMENT PRIMARY KEY,
-    id_transaksi INT NOT NULL,
-    id_barang INT NOT NULL,
-    jumlah INT NOT NULL,
-    subtotal INT NOT NULL,
-    FOREIGN KEY (id_transaksi) REFERENCES tb_transaksi(id_transaksi),
-    FOREIGN KEY (id_barang) REFERENCES tb_barang(id)
-);
